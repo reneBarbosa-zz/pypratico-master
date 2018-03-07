@@ -1,5 +1,7 @@
 class RediscarExcecao(Exception):
     pass
+
+
 class Telefone(object):
     def __init__(self):
         self.ultimo_numero = None
@@ -9,6 +11,6 @@ class Telefone(object):
         return f'ligar para {numero}'
 
     def rediscar(self):
-        # if self.ultimo_numero is None:
-        #     raise RediscarExcecao
+        if self.ultimo_numero is None:
+            raise RediscarExcecao
         return self.ligar(self.ultimo_numero)
