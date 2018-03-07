@@ -44,4 +44,3 @@ def test_rediscar_excecao():
     #   pass #deu certo
     # else:
     #    pytest.fail('Rediscar deveria ter lançado execeção')
-
