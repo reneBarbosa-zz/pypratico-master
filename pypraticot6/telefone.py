@@ -1,5 +1,7 @@
 class RediscarExcecao(Exception):
     pass
+
+
 class Telefone(object):
     def __init__(self):
         self.ultimo_numero = None
