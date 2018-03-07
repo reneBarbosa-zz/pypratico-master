@@ -34,9 +34,9 @@ def test_rediscar_dois_telefones_diferentes(numero):
 def test_rediscar_excecao():
     '''certificar que rediscar antes de fazer ligação lança execeção'''
     telefone = Telefone()
-    try:
+    with pytest.raises(RediscarExcecao):
         telefone.rediscar()
-    except RediscarExcecao:
-        pass #deu certo
-    else:
-        pytest.fail('Rediscar deveria ter lançado execeção')
+    #except RediscarExcecao:
+        #pass #deu certo
+    #else:
+        #pytest.fail('Rediscar deveria ter lançado execeção')
